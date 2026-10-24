@@ -1,5 +1,6 @@
 class ResultsController < ApplicationController
   def show
-    # TODO(human): おみくじの結果を配列で用意し、ランダムに1つ選んでビューに渡す
+    fortunes = ["大吉", "中吉", "小吉", "末吉", "吉"]
+    @result = fortunes.sample
   end
 end
