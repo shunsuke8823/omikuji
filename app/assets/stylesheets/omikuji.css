@@ -12,8 +12,39 @@ body {
 }
 
 .result {
-    font-size: 50px;
     font-weight: bold;
+    margin: 0;
+    line-height: 150px;
+}
+
+.daikichi {
+    font-size: 80px;
+    color: gold;
+    text-shadow: 0px 3px rgb(63, 55, 2);
+}
+
+.chukichi {
+    font-size: 70px;
+    color: silver;
+    text-shadow: 0px 3px rgb(69, 69, 69);
+}
+
+.shoukichi {
+    font-size: 60px;
+    color: brown;
+    text-shadow: 0px 3px rgb(45, 17, 1);
+}
+
+.suekichi {
+    font-size: 50px;
+    color: greenyellow;
+    text-shadow: 0px 2px rgb(11, 53, 2);
+}
+
+.kichi {
+    font-size: 40px;
+    color: black;
+    text-shadow: 0px 1px rgb(96, 95, 95);
 }
 
 .button {
