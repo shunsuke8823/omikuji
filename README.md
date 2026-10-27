@@ -1,24 +1,64 @@
-# README
+# 
+おみくじ
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- 一言説明
+    - 超絶にシンプルなおみくじアプリです。  
 
-Things you may want to cover:
+# 画面のイメージ
 
-* Ruby version
+- <img width="1917" height="865" alt="Image" src="https://github.com/user-attachments/assets/54b73819-2581-4798-aee3-0e6eb346fce4" />  
 
-* System dependencies
+# 使った技術
 
-* Configuration
+- Ruby 3.4.11 
+- Rails 8.1.4
+- PostgreSQL 17
+- Docker 29.8.0  
 
-* Database creation
+# 起動方法
 
-* Database initialization
 
-* How to run the test suite
+**※DockerDesktopを起動させておいてください。**  
+**※コマンドはターミナル上で実行してください。**  
 
-* Services (job queues, cache servers, search engines, etc.)
+- このアプリをローカルにクローンする。
+```
+git clone https://github.com/shunsuke8823/omikuji.git
+```  
 
-* Deployment instructions
+- クローン後、omikujiディレクトリ移動する。
+```
+cd omikuji
+```  
 
-* ...
+- アプリをビルドする。
+```
+docker compose build
+```  
+
+- ビルド終了後、Dockerコンテナを起動。
+```
+docker compose up -d
+```  
+
+- 起動後、DBを作成。
+```
+docker compose exec web bin/rails db:create
+```  
+
+- localhost:3000を開く。  
+
+- 終了する場合は、Dockerコンテナをダウンさせる。
+```
+docker compose down
+```  
+
+# 工夫した点
+
+- おみくじ結果が少ないため、DBを使用せずコントローラーに結果をハッシュ形式で記述した。
+- 結果ごとにデザインを変更するために{結果 => クラス名}というハッシュの形式で実装。
+- HTML,CSSの仕組みを学ぶため、フレームワークを使用せずデザインを作成した。
+
+# 公開URL
+
+- デプロイ後更新。
