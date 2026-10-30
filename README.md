@@ -61,4 +61,5 @@ docker compose down
 
 # 公開URL
 
-- デプロイ後更新。
+- https://omikuji-xr1v.onrender.com/
+- ※render無料プランでの運用のため、初期動作が遅い場合があります。
